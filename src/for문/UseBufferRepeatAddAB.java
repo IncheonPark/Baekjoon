@@ -30,7 +30,7 @@ public class UseBufferRepeatAddAB {
 		        writer.flush();
 		        writer.close();
 		 } catch(IOException e) {
-			 throw e;
+			
 		 }
 		 
 	 }
