@@ -1,4 +1,4 @@
-package for문;
+package while문;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -6,32 +6,35 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-public class ArraysCompare {
-
+public class Add_AB_5 {
+	
 	public static void main(String[] args) throws IOException {
 		
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(System.out));
 		
-		int length, compare;
-		String [] inputs = reader.readLine().split(" ");
+		int a, b;
+		String[] input;
 		
-		length = Integer.parseInt(inputs[0]);
-		compare = Integer.parseInt(inputs[1]);
+		input = reader.readLine().split(" ");
+		a = Integer.parseInt(input[0]);
+		b = Integer.parseInt(input[1]);
 		
-		String [] nums = new String [length];
-		
-		nums = reader.readLine().split(" ");
-		
-		for (String answer : nums) {
-			int intAnswer = Integer.parseInt(answer);
-			if (compare > intAnswer) {
-				writer.write(answer+" ");
+		while (a+b != 0) {
+			
+			if (a > 0 && a < 10) {
+				if (b > 0 && b < 10) {
+					writer.write((a+b)+"\n");
+				}
 			}
+			
+			input = reader.readLine().split(" ");
+			a = Integer.parseInt(input[0]);
+			b = Integer.parseInt(input[1]);
 		}
+		
 		writer.flush();
 		writer.close();
-
 	}
 
 }
